@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Planning Landing page</title>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bgimage">
+   <div class="container mx-auto">
+    <header>
+        <nav class="flex justify-between">
+            <div class="flex itemscenter font-bold pad-1">
+                <img src="./icons8-shooting-star-48.png" alt="" class="img-width">
+                StarLight Eventz
+            </div>
+            <div class="flex">
+            <ul class="navbar flex itemscenter">
+                <li ><a class="textdecor" href="index.html">Home</a></li>
+                <li><a class="textdecor" href="About.html">About</a></li>
+                <li><a class="textdecor" href="services.html">Services</a></li>
+                <li><a class="textdecor" href="gallery.html">Gallery</a></li>
+                <li><a class="textdecor" href="contact.html">Contact</a></li>
+
+            </ul>
+            <div class="toggle-menu padding-3">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        </nav>
+        <div class="dropdown">
+            <li ><a class="textdecor" href="index.html">Home</a></li>
+            <li><a class="textdecor" href="About.html">About</a></li>
+            <li><a class="textdecor" href="services.html">Services</a></li>
+            <li><a class="textdecor" href="gallery.html">Gallery</a></li>
+            <li><a class="textdecor" href="contact.html">Contact</a></li>
+
+        </div>        
+    </header>
+    <main class="min-h-screen-3 mx-auto">
+        <h1 class="color-purple h1fontsize textalign-1 mar-top-bottom">Gallery</h1>
+       
+        <section class="sec1">
+            <div class="container-1 flex">
+            <div class="col-25 imgwidth">
+                <img src="./images/img1.jpeg" alt="image1" class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img2.jpeg" alt="image2"class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img3.jpeg" alt="image3"class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img4.jpg" alt="image4" class="imgsize">
+            </div>
+            </div>
+        </section>
+        <section class="sec2">
+            <div class="container-1 flex">
+            <div class="col-25 imgwidth">
+                <img src="./images/img5.jpg" alt="image1" class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img6.png" alt="image2"class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img7.jpeg" alt="image3"class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img8.jpg" alt="image4" class="imgsize">
+            </div>
+            </div>
+        </section>
+        <section class="sec3">
+            <div class="container-1 flex">
+            <div class="col-25 imgwidth">
+                <img src="./images/img9.jpg" alt="image1" class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img10.jpg" alt="image2"class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img11.jpg" alt="image3"class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img12.jpg" alt="image4" class="imgsize">
+            </div>
+            </div>
+        </section>
+        <section class="sec4">
+            <div class="container-1 flex">
+            <div class="col-25 imgwidth">
+                <img src="./images/img13.jpeg" alt="image1" class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img14.jpg" alt="image2"class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img15.jpg" alt="image3"class="imgsize">
+            </div>
+            <div class="col-25 imgwidth">
+                <img src="./images/img16.jpg" alt="image4" class="imgsize">
+            </div>
+            </div>
+        </section>
+        </main>
+        
+   </div>
+   <footer>@starLight all rights are reserved <br>Srisainath nagar Rangampet Tirupati India<br>phone:1234567891<br>email:starlight67@gmail.com </footer>
+   <!-- toogle menu script -->
+   <script>
+    const toggleMenu=document.querySelector('.toggle-menu');
+    const toggleMenui=document.querySelector('.toggle-menu i');
+    const Dropdown1=document.querySelector('.dropdown');
+
+    toggleMenu.onclick=function() {
+        Dropdown1.classList.toggle('open') 
+        const isOpen=Dropdown1.classList.contains('open')
+        toggleMenui.classList= isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+</script>
+   </body>
+   </html>

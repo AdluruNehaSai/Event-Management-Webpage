@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Planning Landing page</title>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bgimage">
+   <div class="container mx-auto">
+    <header>
+        <nav class="flex justify-between">
+            <div class="flex itemscenter font-bold pad-1">
+                <img src="./icons8-shooting-star-48.png" alt="" class="img-width">
+                StarLight Eventz
+            </div>
+            <div class="flex">
+            <ul class="navbar flex itemscenter">
+                <li ><a class="textdecor" href="index.html">Home</a></li>
+                <li><a class="textdecor" href="About.html">About</a></li>
+                <li><a class="textdecor" href="services.html">Services</a></li>
+                <li><a class="textdecor" href="gallery.html">Gallery</a></li>
+                <li><a class="textdecor" href="contact.html">Contact</a></li>
+
+            </ul>
+            <div class="toggle-menu padding-3">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        </nav>
+        <div class="dropdown">
+            <li ><a class="textdecor" href="index.html">Home</a></li>
+            <li><a class="textdecor" href="About.html">About</a></li>
+            <li><a class="textdecor" href="services.html">Services</a></li>
+            <li><a class="textdecor" href="gallery.html">Gallery</a></li>
+            <li><a class="textdecor" href="contact.html">Contact</a></li>
+
+        </div>        
+    </header>
+    <main class="min-h-screen">
+        <div class="form ">
+        <form action="./page.php" name="Submit" onsubmit="return validateForm()" method="POST">
+            <h1>Contact us</h1>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <p id="errname"></p>
+            <input type="email" id="email" name="email" placeholder="email"><br><br>
+            <p id="erremail"></p>
+            <input type="phone" id="number" name="contactno" placeholder="Contact Number" maxlength="10"><br><br>
+            <p id="errcno"></p>
+            <textarea name="message" rows="10" cols="30" placeholder="Message"></textarea><br><br>
+            <p id="errmsg"></p>
+            <input type="submit" value="Send Message" class="btn-primary">
+          </form> 
+        </div>
+    </main>   
+</div>
+<footer>@starLight all rights are reserved <br>Srisainath nagar Rangampet Tirupati India<br>phone:1234567891<br>email:starlight67@gmail.com </footer>
+<!-- toogle menu script -->
+<script>
+    const toggleMenu=document.querySelector('.toggle-menu');
+    const toggleMenui=document.querySelector('.toggle-menu i');
+    const Dropdown1=document.querySelector('.dropdown');
+
+    toggleMenu.onclick=function() {
+        Dropdown1.classList.toggle('open') 
+        const isOpen=Dropdown1.classList.contains('open')
+        toggleMenui.classList= isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+</script>
+<script>
+function validateForm(){
+    var name1=document.Submit.name.value;
+    var email1=document.Submit.email.value;
+    var cno=document.Submit.contactno.value;
+    var msg=document.Submit.message.value;
+    if (name1 == "") {
+        document.getElementById("errname").innerHTML="*Name cannot be empty"
+        document.getElementById("errname").style.color = "red"
+        document.getElementById("errname").style.fontSize = "20px"
+    return false;
+  }
+    else if ( email1== "") {
+        document.getElementById("erremail").innerHTML="*Email cannot be empty"
+        document.getElementById("erremail").style.color = "red"
+        document.getElementById("erremail").style.fontSize = "20px"
+    return false;
+  }
+    else if (cno == "") {
+        document.getElementById("errcno").innerHTML="*Contact number cannot be empty"
+        document.getElementById("errcno").style.color = "red"
+        document.getElementById("errcno").style.fontSize = "20px"
+    return false;
+  }
+    else if (msg == "") {
+        document.getElementById("errmsg").innerHTML="*TextArea cannot be empty"
+        document.getElementById("errmsg").style.color = "red"
+        document.getElementById("errmsg").style.fontSize = "20px"
+    return false;
+  }
+}
+</script>
+</body>
+</html>

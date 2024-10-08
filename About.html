@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bgimage">
+    <div class="container">
+        <header>
+            <nav class="flex justify-between">
+                <div class="flex itemscenter font-bold pad-1">
+                    <img src="./icons8-shooting-star-48.png" alt="" class="img-width">
+                    StarLight Eventz
+                </div>
+                <div class="flex">
+                <ul class="navbar flex itemscenter">
+                    <li ><a class="textdecor" href="index.html">Home</a></li>
+                    <li><a class="textdecor" href="About.html">About</a></li>
+                    <li><a class="textdecor" href="services.html">Services</a></li>
+                    <li><a class="textdecor" href="gallery.html">Gallery</a></li>
+                    <li><a class="textdecor" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="toggle-menu padding-3">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            </nav>
+            <div class="dropdown">
+                <li ><a class="textdecor " href="index.html">Home</a></li>
+                <li><a class="textdecor " href="About.html">About</a></li>
+                <li><a class="textdecor " href="services.html">Services</a></li>
+                <li><a class="textdecor " href="gallery.html">Gallery</a></li>
+                <li><a class="textdecor" href="contact.html">Contact</a></li>
+            </div>        
+        </header>
+        <main class="min-main-screen">
+        <section>
+            <div class="flex flex-col justify-items">
+                <h1 class="color-purple h1fontsize">About Us</h1>
+                <img src="./background3.png" alt="mic image" class="mic-image">
+                <p class="para flex justify-contents parawidth font-size">Starlight is rooted on the idea that memories are priceless treasures that endure forever. Because of this, we are dedicated about making every event we plan extraordinary and unforgettable. Whether it's a corporate event or a birthday celebration,Our team of business employees and staff work tirelessly to achieve our common goals, pouring their hearts and souls into everything we offer to ensure the best possible experience for our clients<br>
+                    we have been committed to providing unparalleled service and setting new standards in event planning, whether it's a corporate gathering or a birthday celebration.<br> We offers a fully event planning services from a team of experienced and highly energetic event coordinators and planner.
+                    With expertise and passion for delivering first class successful events, we display energy, integrity and professionalism in all that we do because we love to do events. We love to see your success through events.We plan, manage and deliver excellence in creative events which consistently provide a powerful and positive experience. 100%customer satisfaction and new technologies.<br>Our Mission is to simply deliver the best to our clients.We value the money,we value the memories so we keep promise to make your moments memorable</p>
+                    
+                       
+                   
+            </div>
+        </section>
+        </main>
+    </div>
+    <footer>@starLight all rights are reserved <br>Srisainath nagar Rangampet Tirupati India<br>phone:1234567891<br>email:starlight67@gmail.com </footer>
+    <!-- toggle menu script -->
+    <script>
+        const toggleMenu=document.querySelector('.toggle-menu');
+        const toggleMenui=document.querySelector('.toggle-menu i');
+        const Dropdown1=document.querySelector('.dropdown');
+    
+        toggleMenu.onclick=function() {
+            Dropdown1.classList.toggle('open') 
+            const isOpen=Dropdown1.classList.contains('open')
+            toggleMenui.classList= isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>

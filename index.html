@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Management</title>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bgimage">
+   <div class="container mx-auto">
+    <header>
+        <nav class="flex justify-between">
+            <div class="flex itemscenter font-bold pad-1">
+                <img src="./icons8-shooting-star-48.png" alt="" class="img-width">
+                StarLight Eventz
+            </div>
+            <div class="flex">
+            <ul class="navbar flex itemscenter">
+                <li ><a class="textdecor" href="index.html">Home</a></li>
+                <li><a class="textdecor" href="About.html">About</a></li>
+                <li><a class="textdecor" href="services.html">Services</a></li>
+                <li><a class="textdecor" href="gallery.html">Gallery</a></li>
+                <li><a class="textdecor" href="contact.html">Contact</a></li>
+                <li><a class="textdecor" href="login.php">Login</a></li>
+            </ul>
+            <div class="toggle-menu padding-3">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        </nav>
+        <div class="dropdown">
+            <li ><a class="textdecor" href="index.html">Home</a></li>
+            <li><a class="textdecor" href="About.html">About</a></li>
+            <li><a class="textdecor" href="services.html">Services</a></li>
+            <li><a class="textdecor" href="gallery.html">Gallery</a></li>
+            <li><a class="textdecor" href="contact.html">Contact</a></li>
+            <li><a class="textdecor" href="login.php">Login</a></li>
+        </div>        
+    </header>
+    <main class="min-h-screen ">
+        <section class="section1">
+            <div class="flex itemscenter padding-3 div-main ">
+                <div class="flex top-left justify-center flex-col padding-2">
+                  <h1 class="mar-1 fontsizebig">Be Special Moments <br> With Us</h1>
+                  <p class="fontsize-para">Welcome to the fascinating world of event experiences. Whether you're experienced with events or this is your first time, we have something to offer that will inspire you. </p>
+                  <a class="anchor-style" href="services.html">What we Provide</a>
+                </div>
+                <div class="top-right flex justify-center">
+                    <img class="img-collage imgborder-radius" src="./party-events-logo.png" alt="decoration image">
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="section2">
+            <div class="flex padding-3 top-left-right">
+                <div class="top-left1 flex padding-LR ">
+                    <img class="widthhieght margin-1 padding-1" src="./background3.png" alt="mic">
+                </div>
+                <div class=" top-righ2  flex-col margin-1 justify-items font-family padding-1">
+                 <h1>About Us</h1>
+                 <p class="flex font-size margin-1 marginLR  padding-1 justify-center width-1 text-justify padding-right">
+                    Starlight is rooted on the idea that memories are priceless treasures that endure forever. Because of this, we are dedicated about making every event we plan extraordinary and unforgettable. Whether it's a corporate event or a birthday celebration, Our team of business employees and staff work tirelessly to achieve our common goals, pouring their hearts and souls into everything we offer to ensure the best possible experience for our clients.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="flex padding-3 top-left-right">
+                <div class="top-left1 flex padding-LR">
+                    <img class="widthhieght margin-1 padding-1" src="./collage3.jpg" alt="decoration">
+                </div>
+                <div class=" top-righ2  flex-col margin-1 justify-items   font-family padding-1">
+                 <h1>Services</h1>
+                 <p class=" flex font-size margin-1 padding-1 justify-center width-1 text-justify">we specialize in crafting unique and original event experiences that leave a lasting impression. With our team's dedication and expertise, we work together to ensure your events are unforgettable and that you have the time of your life!our services are Wedding decor,Haldi decor,Mehendi decor,Ballon decor.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+ 
+   
+</div>
+<footer>@starLight all rights are reserved <br>Srisainath nagar Rangampet Tirupati India<br>phone:1234567891<br>email:starlight67@gmail.com </footer>
+<script>
+    const toggleMenu=document.querySelector('.toggle-menu');
+    const toggleMenui=document.querySelector('.toggle-menu i');
+    const Dropdown1=document.querySelector('.dropdown');
+
+    toggleMenu.onclick=function() {
+        Dropdown1.classList.toggle('open') 
+        const isOpen=Dropdown1.classList.contains('open')
+        toggleMenui.classList= isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+</script>
+</body>
+</html>
